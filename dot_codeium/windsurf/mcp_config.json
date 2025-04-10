@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nxMcpServer": {
+      "command": "npx",
+      "args": ["-y", "nx-mcp", "/Users/oyemike/Projects/incyt-monorepo"]
+    }
+  }
+}
