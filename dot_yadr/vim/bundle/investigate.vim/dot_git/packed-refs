@@ -1,0 +1,15 @@
+# pack-refs with: peeled fully-peeled 
+472773d8551940d16376f9991882423345b3e15c refs/remotes/origin/gh-pages
+c65f0740ea44678f4379ea55db785d44c7e4a90f refs/remotes/origin/ks-everything
+326edb7d00e05d51d3773bc724cd2a69c5e4fa71 refs/remotes/origin/master
+d1a97d843e7bbe950574db83000c6d4080544ffc refs/tags/1.0.0
+a9fdb11ea45ce177f4b85c55e89820a59e3ac4ac refs/tags/1.0.1
+3a2d5af61a3497704060c9e0752074d06070b0f4 refs/tags/1.0.2
+1d07827bb3c5af2322d3c2f1eb5a7c99e963e06d refs/tags/1.0.3
+650585fa256a07bcb3af58446f3149b3904f700f refs/tags/1.0.4
+ff7666a1cfb8abcc9f4b2acc8d48f673880b0e65 refs/tags/1.1.0
+3780a2144cb08f9daa3eda969bb9e7f033bd5bfe refs/tags/1.1.1
+15c7256b9c52643d7d0de27012569a489e5c7413 refs/tags/1.1.2
+26e5d45a7dfe3c3535d4a96d53e0d9f2fe6e6c68 refs/tags/1.1.3
+a8d45386d866c3f98681dddcec6076c216c5b21d refs/tags/1.1.4
+326edb7d00e05d51d3773bc724cd2a69c5e4fa71 refs/tags/1.2.0

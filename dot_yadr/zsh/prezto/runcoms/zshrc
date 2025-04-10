@@ -1,0 +1,53 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+#Add NVM to SHELL
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+export PATH="/usr/local/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#add go-lang to path
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+#create GOPATH for go-lang library packages
+export GOPATH=$HOME/Projects/go-projects
+#add go-lang binaries to path
+export PATH=$PATH:$GOPATH/bin
+
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+#add x11 font config
+export FONTCONFIG_PATH="/opt/X11/lib/X11/fontconfig"
+
+# add user base to python path
+export PYTHONPATH=$(python -c "import site, os; print(os.path.join(site.USER_BASE, 'lib', 'python', 'site-packages'))"):$PYTHONPATH
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+#Add Android to Path
+export ANDROID_HOME="/Users/oyemike/Library/Android/sdk"
